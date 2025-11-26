@@ -36,9 +36,8 @@ export const analyzeMedicalValues = async (
   values: Record<string, string>,
   language: Language
 ): Promise<string> => {
-  // Simulate processing delay for "Real Feel"
-  await new Promise(resolve => setTimeout(resolve, 1500));
-
+  // Removed artificial delay for instant results
+  
   const isAr = language === 'ar';
   let report = isAr 
     ? `### تقرير التحليل الطبي\n**نوع الفحص:** ${getTestName(type, 'ar')}\n**التاريخ:** ${new Date().toLocaleDateString('ar-EG')}\n\n---\n\n` 
@@ -95,7 +94,7 @@ export const generateNutritionPlan = async (
   conditions: string[],
   language: Language
 ): Promise<string> => {
-  await new Promise(resolve => setTimeout(resolve, 2000));
+  // Removed artificial delay for instant results
 
   // Mifflin-St Jeor Equation
   const bmr = (10 * stats.weight) + (6.25 * stats.height) - (5 * stats.age) - 161;
@@ -175,8 +174,7 @@ export const generateChatResponse = async (
   history: string,
   language: Language
 ): Promise<string> => {
-  // Simulate AI thinking time
-  await new Promise(resolve => setTimeout(resolve, 1200));
+  // Removed artificial delay for instant results
   
   const msg = message.toLowerCase().trim();
   const isAr = language === 'ar';

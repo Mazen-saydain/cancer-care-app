@@ -240,6 +240,7 @@ const App: React.FC = () => {
   // Splash Screen Timer
   useEffect(() => {
     if (view === 'splash') {
+      // Reduced splash timer to 1500ms for faster load feel
       const timer = setTimeout(() => {
         if (!authLoading) {
            if (user) {
@@ -254,7 +255,7 @@ const App: React.FC = () => {
              else setView('welcome');
            }
         }
-      }, 3000);
+      }, 1500);
       return () => clearTimeout(timer);
     }
   }, [view, user, authLoading]);
@@ -1073,7 +1074,9 @@ const App: React.FC = () => {
                                     onClick={() => handleAnalyzeManualValues(view)}
                                     disabled={isAiLoading || Object.keys(manualLabValues).length === 0}
                                 >
-                                    {isAiLoading ? t('loading') : t('analyze_btn')}
+                                    {isAiLoading ? (
+                                        <div className="w-5 h-5 border-2 border-white/30 border-t-white rounded-full animate-spin" />
+                                    ) : t('analyze_btn')}
                                 </Button>
                             </div>
 
