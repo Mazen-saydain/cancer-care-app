@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" />
     
     <!-- SEO & Meta Tags -->
     <title>Cancer Care - Breast Cancer Support & AI Assistance</title>
@@ -22,6 +22,9 @@
     <meta property="twitter:card" content="summary_large_image">
     <meta property="twitter:title" content="Cancer Care - Breast Cancer Support">
     <meta property="twitter:description" content="Advanced AI support for breast cancer patients.">
+
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
 
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
@@ -69,7 +72,13 @@
     </script>
     <style>
       /* Smooth scrolling */
-      html { scroll-behavior: smooth; }
+      html { 
+        scroll-behavior: smooth; 
+        -webkit-tap-highlight-color: transparent; /* Remove gray tap box on iOS */
+      }
+      body {
+        overscroll-behavior-y: none; /* Prevent bounce effect on body */
+      }
       /* Custom scrollbar */
       ::-webkit-scrollbar { width: 6px; }
       ::-webkit-scrollbar-track { background: transparent; }
@@ -83,12 +92,13 @@
     "react": "https://aistudiocdn.com/react@^19.2.0",
     "react-dom/": "https://aistudiocdn.com/react-dom@^19.2.0/",
     "@google/genai": "https://aistudiocdn.com/@google/genai@^1.30.0",
-    "lucide-react": "https://aistudiocdn.com/lucide-react@^0.554.0"
+    "lucide-react": "https://aistudiocdn.com/lucide-react@^0.554.0",
+    "firebase/": "https://aistudiocdn.com/firebase@^12.6.0/"
   }
 }
 </script>
 </head>
-  <body class="bg-gray-50 text-gray-900 dark:bg-slate-900 dark:text-white transition-colors duration-300">
+  <body class="bg-gray-50 text-gray-900 dark:bg-slate-900 dark:text-white transition-colors duration-300 antialiased selection:bg-pink-500 selection:text-white">
     <div id="root"></div>
   </body>
 </html>
