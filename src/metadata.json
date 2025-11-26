@@ -1,0 +1,8 @@
+{
+  "name": "Pink Hope - Breast Cancer Care",
+  "description": "A comprehensive AI-powered care platform for breast cancer patients featuring nutrition planning, lab analysis, and 24/7 AI support.",
+  "requestFramePermissions": [
+    "camera",
+    "microphone"
+  ]
+}
