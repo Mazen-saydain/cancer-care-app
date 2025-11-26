@@ -1,10 +1,10 @@
 {
   "files": {
-    "main.js": "/cancer-care-app/static/js/main.1d98a5ea.js",
+    "main.js": "/cancer-care-app/static/js/main.27f7ac7e.js",
     "index.html": "/cancer-care-app/index.html",
-    "main.1d98a5ea.js.map": "/cancer-care-app/static/js/main.1d98a5ea.js.map"
+    "main.27f7ac7e.js.map": "/cancer-care-app/static/js/main.27f7ac7e.js.map"
   },
   "entrypoints": [
-    "static/js/main.1d98a5ea.js"
+    "static/js/main.27f7ac7e.js"
   ]
 }
